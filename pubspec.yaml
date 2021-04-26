@@ -1,0 +1,24 @@
+name: dart_metrics_bug_proof
+description: dart_metrics_bug_proof
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  dart_code_metrics: ^3.1.0
+  flutter_test:
+    sdk: flutter
+  testing_api:
+    path: testing_api
+
+flutter:
+  uses-material-design: true

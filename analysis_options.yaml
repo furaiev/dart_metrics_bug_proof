@@ -1,0 +1,46 @@
+analyzer:
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+    - "**/generated/**.dart"
+    - "ios/**"
+  strong-mode:
+    implicit-casts: false
+    implicit-dynamic: false
+  errors:
+    missing_required_param: warning
+    missing_return: error
+  plugins:
+    - dart_code_metrics
+
+dart_code_metrics:
+  anti-patterns:
+    - long-method
+    - long-parameter-list
+  metrics:
+    cyclomatic-complexity: 22
+    lines-of-code: 100
+    source-lines-of-code: 70
+    lines-of-executable-code: 70
+    number-of-parameters: 4
+    maximum-nesting-level: 5
+  metrics-exclude:
+    - test/**
+    - testing_api/**
+    - e2e/**
+    - ios/**
+  rules:
+    - newline-before-return
+    - no-boolean-literal-compare
+    - no-empty-block
+    - prefer-trailing-comma
+    - no-equal-then-else
+    - avoid-unused-parameters
+    - binary-expression-operand-order
+    - double-literal-format
+    - no-object-declaration
+    - prefer-intl-name
+    - provide-correct-intl-args
+    - no-magic-number:
+        allowed: [-1, 0, 0.5, 1, 2, 3, 4, 5, 10, 100 ]
+    - avoid-returning-widgets
